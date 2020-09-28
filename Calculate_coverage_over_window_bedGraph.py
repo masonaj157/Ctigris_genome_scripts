@@ -5,7 +5,7 @@ import argparse
 import csv
 from Bio import SeqIO
 
-parser = argparse.ArgumentParser(description='writes a table of CG content in a genome (although technically it will work with any fasta)')
+parser = argparse.ArgumentParser(description='calculates coverage over a genomic window given a bedfile with coverage at each position')
 parser.add_argument("-s","--seqfile",
 					type=str,
 					default='',
