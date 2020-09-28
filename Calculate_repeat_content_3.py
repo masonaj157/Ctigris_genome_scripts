@@ -6,7 +6,7 @@ import csv
 from Bio import SeqIO
 import time
 
-parser = argparse.ArgumentParser(description='writes a table of repeat content in a genome (although technically it will work with any fasta) given a gff file containing repeats.')
+parser = argparse.ArgumentParser(description='writes a table of repeat matches content in a genome given an assembly a gff file containing repeats.')
 parser.add_argument("-s","--seqfile",
 					type=str,
 					default='',
