@@ -6,7 +6,7 @@ import csv
 from Bio import SeqIO
 import time
 
-parser = argparse.ArgumentParser(description='writes a table of CG content in a genome (although technically it will work with any fasta)')
+parser = argparse.ArgumentParser(description='writes a table of repeat content in a genome (although technically it will work with any fasta) given a gff file containing repeats.')
 parser.add_argument("-s","--seqfile",
 					type=str,
 					default='',
@@ -14,46 +14,7 @@ parser.add_argument("-s","--seqfile",
 parser.add_argument("-g","--gff",
 					type=str,
 					default='',
-					help="gff3 file containing genes as a type")
-parser.add_argument("-wsi","--windowsize",
-					type=int,
-					default=10000,
-					help="window size in basepairs")
-parser.add_argument("-wst","--windowstep",
-					type=int,
-					default=10000,
-					help="window step length in basepairs")
-parser.add_argument("-o","--output",
-					type=str,
-					default='',
-					help="name of cytoband output file")
-args=parser.parse_args()
-
-seqfile = args.seqfile
-gff = args.gff
-windowsize = args.windowsize
-windowstep = args.windowstep
-output = args.output
-
-#########################################################################################
-
-#!/usr/bin/env python
-
-
-import argparse
-import csv
-from Bio import SeqIO
-import time
-
-parser = argparse.ArgumentParser(description='writes a table of CG content in a genome (although technically it will work with any fasta)')
-parser.add_argument("-s","--seqfile",
-					type=str,
-					default='',
-					help="Sequence file in fasta format")
-parser.add_argument("-g","--gff",
-					type=str,
-					default='',
-					help="gff3 file containing genes as a type")
+					help="gff3 file containing repeats as a type")
 parser.add_argument("-wsi","--windowsize",
 					type=int,
 					default=10000,
